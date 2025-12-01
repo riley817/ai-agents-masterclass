@@ -22,8 +22,7 @@ weather_agent = Agent(
     instruction="You help the user with weather related questions",
     model=MODEL,
     tools=[get_weather, conver_units],
-    sub_agents=[geo_agent],
-    description="Transfer to this agent when you have a weather related question."
+    sub_agents=[geo_agent], # open ai handoff 비슷
 )
 # 반드시 root_agent
 root_agent = weather_agent
